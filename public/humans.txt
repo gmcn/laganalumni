@@ -1,0 +1,16 @@
+/* TEAM */
+Web Developer: Gary McNally
+Email: gary@websiteni.com
+Twitter: @garymcnally
+Location: WebsiteNI, N. Ireland
+
+Designer: Paul McGurk
+Email: paul@websiteni.com
+Twitter:
+Location: WebsiteNI, N. Ireland
+
+/* SITE */
+Site live: 2017/xx/xx
+Last update: 2017/xx/xx
+Standards: HTML5, CSS3, PHP, mySQL
+Framewords: Laravel, Bootstrap

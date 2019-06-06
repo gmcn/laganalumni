@@ -1,0 +1,45 @@
+@extends('layouts.app')
+
+@section('content')
+
+@if (session('message'))
+<div class="flash-message">
+  <div class="alert alert-success alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      {{ session('message') }}
+  </div>
+</div>
+@endif
+
+<h1 class="page-header">News</h1>
+<h2 class="sub-header"><a href="{{ url('/admin/add-news') }}">add new</a></h2>
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <!-- <th>#</th> -->
+          <th>Name</th>
+          <th>Slug</th>
+          <th>edit</th>
+          <th>delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        @foreach ($news as $new)
+        <tr>
+          <!-- <td>{{ $new->id }}</td> -->
+          <td>{{ $new->title }} @if (!$new->active) <span style="color: red">*draft</span> @endif</td>
+          <td>{{ $new->slug }}</td>
+          <td><a href="{{ url('/admin/edit-news') }}/{{ $new->id }}"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a></td>
+          <td><a href=""><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a></td>
+        </tr>
+        @endforeach
+      </tbody>
+    </table>
+
+  {!! $news->render() !!}
+
+</div><!-- /.table-responsive -->
+</div>
+
+@endsection

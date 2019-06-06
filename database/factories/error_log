@@ -1,0 +1,1 @@
+[18-May-2017 10:57:21 UTC] PHP Fatal error:  Call to a member function define() on null in /home/alumnilag/public_html/database/factories/ModelFactory.php on line 14
